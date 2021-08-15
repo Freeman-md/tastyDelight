@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500;600;700&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.responsive-container {
+  @apply px-2 mx-auto max-w-7xl sm:px-10 lg:px-12;
+}
+
+.active {
+  @apply bg-yellow text-black px-7 py-1.5 rounded-lg;
+}
+
+.button {
+  @apply font-semibold text-center text-white rounded-3xl;
+}
+
+.button-sm {
+  @apply py-1.5 px-7 text-base;
+}
+
+.button-md {
+  @apply py-2 text-base px-9;
+}
+
+.button-lg {
+  @apply px-12 py-2 text-lg;
+}
+
+.button-xlg {
+  @apply px-8 py-2.5 text-2xl;
+}
+
+.button-orange {
+  @apply bg-orange shadow-orange;
+}
+
+.button-purple {
+  @apply bg-purple shadow-purple;
+}
+
+.button-light-purple {
+  @apply bg-light-purple;
+}
+
+.button-green {
+  @apply bg-green shadow-green;
+}
