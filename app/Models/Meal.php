@@ -11,7 +11,7 @@ class Meal extends Model
 
     protected $table = 'meals';
 
-    protected $fillable = ['name', 'image', 'background', 'description'];
+    protected $fillable = ['name', 'slug', 'image', 'background', 'description'];
 
     public function locations() {
         return $this->belongsToMany(Location::class);

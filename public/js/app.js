@@ -22712,7 +22712,7 @@ var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "flex flex-col items-center justify-center space-y-4 text-white"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "font-semibold text-center bg-white text-light-purple rounded-3xl py-1.5 px-7 text-base "
-}, "1 City"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "Edo")], -1
+}, "1 City"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "Enugu")], -1
 /* HOISTED */
 );
 
@@ -22801,7 +22801,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Head, {
     title: "Recipes"
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Recipe Booklet "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Download Now "), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: _ctx.$page.props.backgrounds.recipes,
+    src: _ctx.$page.props.images.backgrounds.recipes,
     "class": "object-cover object-center w-full cursor-default"
   }, null, 8
   /* PROPS */

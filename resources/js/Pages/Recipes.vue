@@ -8,7 +8,7 @@
   <button class="fixed z-10 mr-24 uppercase button button-orange button-xlg bottom-20 right-60">Download!</button> 
   
   <div class="fixed w-5/6 h-3/4 top-10 left-20">
-    <img :src="$page.props.backgrounds.recipes" class="object-cover object-center w-full cursor-default" />
+    <img :src="$page.props.images.backgrounds.recipes" class="object-cover object-center w-full cursor-default" />
   </div>
   
 </template>

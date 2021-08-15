@@ -42,7 +42,7 @@
           <img :src="$page.props.images.stars.bronze" alt="Bronze Star" class="w-16 h-16" />
           <div class="flex flex-col items-center justify-center space-y-4 text-white">
             <div class="font-semibold text-center bg-white text-light-purple rounded-3xl py-1.5 px-7 text-base ">1 City</div>
-            <span>Edo</span>
+            <span>Enugu</span>
           </div>
         </div>
 
