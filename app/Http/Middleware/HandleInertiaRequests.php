@@ -44,7 +44,10 @@ class HandleInertiaRequests extends Middleware
                     'recipes' => asset('images/recipes.png'),
                     'adults' => asset('images/adults.png'),
                     'game' => asset('images/game-background.jfif'),
-                    'meals' => asset('images/meals-background.png')
+                    'kano' => asset('images/kano-background.png'),
+                    'enugu' => asset('images/enugu-background.jpg'),
+                    'lagos' => asset('images/lagos-background.jpg'),
+                    'benin-city' => asset('images/benin-city-background.jpg'),
                 ],
                 'avatars' => [
                     'boy' => [

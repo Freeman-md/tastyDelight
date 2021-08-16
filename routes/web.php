@@ -23,7 +23,7 @@ use Inertia\Inertia;
 Route::get('/', [HomeController::class, 'index'])->name('index');  
 
 Route::group(['middleware' => ['auth', 'verified']], function() {
-    Route::get('/recipes', [HomeController::class, 'recipes'])->name('recipes');
+    // Route::get('/recipes', [HomeController::class, 'recipes'])->name('recipes');
     Route::get('/for-grown-ups', [HomeController::class, 'adults'])->name('adults');
 
     // Characters

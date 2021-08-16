@@ -72,7 +72,7 @@ export default {
     return {
       links: [
         {text: 'Home', routeName: 'index'},
-        {text: 'Recipes', routeName: 'recipes'},
+        // {text: 'Recipes', routeName: 'recipes'},
         {text: 'Characters', routeName: 'characters'},
         {text: 'For Grown Ups', routeName: 'adults', route: 'for-grown-ups'},
       ],

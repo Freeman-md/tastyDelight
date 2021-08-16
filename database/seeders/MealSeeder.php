@@ -21,7 +21,7 @@ class MealSeeder extends Seeder
     }
 
     public function createMeals() {
-        $meals = ["Tuwon Shinkafa With Miyan Kuka", "Fura De'Nunu (Nunu)", "Masa (Rice Cake)", "Donkwa", "Burabisco"];
+        $meals = ['', '', '', '', ''];
 
         // Create Five Meals
         collect($meals)->each(function($meal, $index) {
@@ -29,8 +29,8 @@ class MealSeeder extends Seeder
             Meal::create([
                 'name' => $meal,
                 'slug' => Str::slug($meal),
-                'image' => asset("images/food-{$index}.png"),
-                'background' => $index != 4 ? asset("images/food-{$index}-main.png") : asset("images/food-{$index}-main.jfif")
+                'image' => asset("images/lagos-food-{$index}.jpg"),
+                'background' => asset("images/lagos-{$index}-main.jpg")
             ]);
         });
     }

@@ -21,7 +21,7 @@ class LocationSeeder extends Seeder
             Location::create([
                 'name' => $location,
                 'slug' => Str::slug($location),
-                'background' => asset('images/location-background.png')
+                'background' => asset('images/'. Str::slug($location) .'.jpg')
             ]);
         });
     }

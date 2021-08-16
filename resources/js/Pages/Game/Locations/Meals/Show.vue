@@ -5,7 +5,11 @@
     <span class="fa fa-times"></span>
   </Link> 
 
-  <button v-show="meal.id !== 5" @click.prevent="getMealById" class="fixed z-10 button button-purple button-xlg bottom-10 right-10">Next</button> 
+  <button v-show="meal.id !== 1" @click.prevent="getPreviousMeal" class="fixed z-10 flex items-center justify-center text-xl font-bold text-white bottom-10 left-10 button button-xlg button-orange">
+    <span class="fas fa-arrow-left"></span>
+  </button>
+
+  <button v-show="meal.id !== 18" @click.prevent="getNextMeal" class="fixed z-10 button button-purple button-xlg bottom-10 right-10">Next</button> 
 
   <div class="fixed inset-0">
     <img :src="meal.background" class="object-cover object-center w-full h-full" :alt="meal.name" />
@@ -26,12 +30,18 @@ export default {
     Link,
   },
   methods: {
-    getMealById() {
+    getNextMeal() {
       Inertia.get(this.route('location.meals.show', {
         location: this.location,
         meal: ++this.meal.id 
       }))
-    }
+    },
+    getPreviousMeal() {
+      Inertia.get(this.route('location.meals.show', {
+        location: this.location,
+        meal: --this.meal.id 
+      }))
+    },
   }
 }
 </script>

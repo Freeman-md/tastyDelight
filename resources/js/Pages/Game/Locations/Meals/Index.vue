@@ -22,10 +22,10 @@
   </div>
 
   <!-- Take Quiz Button -->
-  <Link :href="route('location.quiz', { location })" class="fixed z-10 button button-purple button-xlg bottom-10 right-10">Take Quiz</Link> 
+  <!-- <Link :href="route('location.quiz', { location })" class="fixed z-10 button button-purple button-xlg bottom-10 right-10">Take Quiz</Link>  -->
 
   <div class="fixed inset-0">
-    <img :src="$page.props.images.backgrounds.meals" class="object-cover object-center w-full h-full" alt="Meals Background" />
+    <img :src="bgImage" class="object-cover object-center w-full h-full" alt="Background" />
   </div>
 
 </template>
@@ -37,9 +37,18 @@ export default {
     location: Object,
     meals: Object,
   },
+  data() {
+    return {
+      bgImage: null,
+    }
+  },
   components: {
     Head,
     Link,
   },
+  created() {
+    let location = window.location.pathname.split('/game/locations/')[1].split('/meals')[0]
+    this.bgImage = this.$page.props.images.backgrounds[location]
+  }
 }
 </script>
