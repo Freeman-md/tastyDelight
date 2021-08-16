@@ -12,7 +12,7 @@
       </Link>
       <BreezeDropdown align="right" width="48">
         <template #trigger>
-          <img :src="$page.props.auth.user.avatar" class="object-cover object-center w-8 h-8 rounded-full sm:h-14 sm:w-14" :class="{'border-4 rounded-full border-yellow': $page.url === '/profile'}" />
+          <img :src="$page.props.auth?.user?.avatar" class="object-cover object-center w-8 h-8 rounded-full sm:h-14 sm:w-14" :class="{'border-4 rounded-full border-yellow': $page.url === '/profile'}" />
         </template>
 
         <template #content>
