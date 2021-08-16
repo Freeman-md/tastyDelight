@@ -29,7 +29,8 @@ class MealSeeder extends Seeder
             Meal::create([
                 'name' => $meal,
                 'slug' => Str::slug($meal),
-                'background' => asset("images/food-{$index}-main.png")
+                'image' => asset("images/food-{$index}.png"),
+                'background' => $index != 4 ? asset("images/food-{$index}-main.png") : asset("images/food-{$index}-main.jfif")
             ]);
         });
     }

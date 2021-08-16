@@ -5,21 +5,21 @@
         v-for="(link, index) in links"
         :key="index"
         :class="{'active': $page.url === '/' && link.text === 'Home' ? true : $page.url === `/${link.route || link.routeName}`}"
-        class="text-xl font-semibold text-white"
+        class="text-xs font-semibold text-white sm:text-xl"
         :href="route(link.routeName)"
       >
       {{ link.text }}
       </Link>
       <BreezeDropdown align="right" width="48">
         <template #trigger>
-          <img :src="$page.props.auth.user.avatar" class="object-cover object-center rounded-full h-14 w-14" :class="{'border-4 rounded-full border-yellow': $page.url === '/profile'}" />
+          <img :src="$page.props.auth.user.avatar" class="object-cover object-center w-8 h-8 rounded-full sm:h-14 sm:w-14" :class="{'border-4 rounded-full border-yellow': $page.url === '/profile'}" />
         </template>
 
         <template #content>
           <BreezeDropdownLink :href="route('profile')">
             Your Profile
           </BreezeDropdownLink>
-          <button class="block w-full px-4 py-2 text-sm font-bold leading-5 text-center text-gray-700 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus:bg-gray-100" @click.prevent="openModal">
+          <button class="block w-full px-2 py-1 text-xs font-bold leading-5 text-center text-gray-700 transition duration-150 ease-in-out sm:text-sm sm:px-4 sm:py-2 hover:bg-gray-100 focus:outline-none focus:bg-gray-100" @click.prevent="openModal">
             Delete Account
           </button>
           <BreezeDropdownLink :href="route('logout')" method="post" as="button">

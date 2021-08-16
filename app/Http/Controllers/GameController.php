@@ -10,8 +10,4 @@ class GameController extends Controller
     public function index() {
         return Inertia::render('Game/Index');
     }
-
-    public function locations() {
-        return Inertia::render('Game/Locations');
-    }
 }

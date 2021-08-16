@@ -47,6 +47,14 @@ class AnswerSeeder extends Seeder
         $questions = Question::all();
         $questions->each(function($question, $index) use ($ids){
             $question->answers()->sync($ids[$index]);
+            $this->setCorrectQuestionAnswer($question);
         });
+    }
+
+    public function setCorrectQuestionAnswer($question) {
+        $answer = $question->answers()->first();
+
+        // Set correct question answer
+        $question->answers()->updateExistingPivot($answer, array('correct' => true), false);
     }
 }

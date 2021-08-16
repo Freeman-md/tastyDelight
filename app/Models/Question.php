@@ -14,7 +14,7 @@ class Question extends Model
     protected $fillable = ['text'];
 
     public function answers() {
-        return $this->belongsToMany(Answer::class);
+        return $this->belongsToMany(Answer::class)->withPivot('correct');
     }
 
     public function locations() {

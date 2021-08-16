@@ -17,6 +17,7 @@ class CreateAnswerQuestionTable extends Migration
             $table->id();
             $table->foreignId('answer_id')->constrained()->cascadeOnDelete();
             $table->foreignId('question_id')->constrained()->cascadeOnDelete();
+            $table->boolean('correct')->default(false);
             $table->timestamps();
         });
     }

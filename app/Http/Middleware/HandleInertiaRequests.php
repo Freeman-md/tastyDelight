@@ -43,7 +43,8 @@ class HandleInertiaRequests extends Middleware
                     'simple' => asset('images/background.jpg'),
                     'recipes' => asset('images/recipes.png'),
                     'adults' => asset('images/adults.png'),
-                    'game' => asset('images/game-background.jfif')
+                    'game' => asset('images/game-background.jfif'),
+                    'meals' => asset('images/meals-background.png')
                 ],
                 'avatars' => [
                     'boy' => [
@@ -75,6 +76,9 @@ class HandleInertiaRequests extends Middleware
                 ],
                 'recipe-booklet' => asset('images/recipe-booklet.png'),
                 'logo' => asset('images/logo.png'),
+            ],
+            'pdf' => [
+                'recipes' => asset('data/recipes.pdf')
             ]
         ]);
     }

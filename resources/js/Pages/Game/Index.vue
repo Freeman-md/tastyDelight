@@ -8,7 +8,7 @@
     </div>
   </div>
 
-  <Link :href="route('game.locations')" class="fixed z-10 button button-orange button-xlg bottom-10 left-10">Begin Adventure!</Link> 
+  <Link :href="route('locations')" class="fixed z-10 button button-orange button-xlg bottom-10 left-10">Begin Adventure!</Link> 
 
   <GameCharacters />
 

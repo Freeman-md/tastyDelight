@@ -14,6 +14,7 @@ module.exports = {
                 'complex': "url('/images/image-background.jpg')",
                 'simple': "url('/images/background.jpg')",
                 'game': "url('/images/game-background.jfif')",
+                'meals': "url('/images/meals-background.png')",
             }),
             backgroundColor: {
                 'purple': '#62007A',
@@ -32,6 +33,7 @@ module.exports = {
                 'lighter-green': '#00FF00',
                 'secondary': '#E6E6E6',
                 'light-blue': '#00EFE3',
+                'saturated-orange': '#FFC467',
             },
             borderColor: {
                 'purple': '#62007A',

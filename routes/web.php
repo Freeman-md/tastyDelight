@@ -4,6 +4,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CharacterController;
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\LocationController;
+use App\Http\Controllers\QuizController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -44,7 +46,20 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
 
     // Games
     Route::get('/game', [GameController::class, 'index'])->name('game');
-    Route::get('/game/locations', [GameController::class, 'locations'])->name('game.locations');
+    Route::group(['prefix' => '/game/locations'], function() {
+        Route::get('', [LocationController::class, 'index'])->name('locations');
+        Route::group(['prefix' => '/{location:slug}'], function() {
+            Route::get('', [LocationController::class, 'show'])->name('locations.show');
+            Route::group(['prefix' => '/meals'], function() {
+                Route::get('', [LocationController::class, 'getMeals'])->name('location.meals');
+                Route::get('/{meal:id}', [LocationController::class, 'getMeal'])->name('location.meals.show');
+            });
+            Route::group(['prefix' => '/quiz'], function() {
+                Route::get('', [QuizController::class, 'index'])->name('location.quiz');
+                Route::post('', [QuizController::class, 'store']);
+            });
+        });
+    });
 });
 
 require __DIR__.'/auth.php';

@@ -2,9 +2,9 @@
     <Head title="Home" />
 
     <div class="flex flex-col items-start justify-center h-full space-y-8 responsive-container">
-      <h1 class="flex flex-col w-1/3">
+      <div class="flex flex-col sm:w-2/5 lg:w-1/3">
         <img :src="$page.props.images.logo" class="object-cover object-center" />
-      </h1>
+      </div>
       <p class="text-xl font-semibold">Learn about Nigerian Food <br> with with Olanna and Ose!</p>
       <div class="flex items-center space-x-4" v-if="!$page.props.auth.user">
         <Link :href="route('register')" class="button button-orange button-sm">Sign up</Link>
